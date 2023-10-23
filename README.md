@@ -1,3 +1,37 @@
+
+**1. DataProvider.js:**
+   - This file defines a `DataContext` using React's Context API.
+   - `DataContext` will store the state for the HTML, CSS, and JavaScript code.
+   - `DataProvider` is a component that wraps its children with `DataContext.Provider` to provide access to the context state and setter functions.
+
+**2. Header.js:**
+   - The `Header` component is responsible for rendering the application's header, which might include a logo.
+
+**3. Code.js:**
+   - The `Code` component is the main component that contains the code editors and their headers.
+   - It uses `useContext` to access the state and setter functions provided by `DataContext`.
+
+**4. Editor.js:**
+   - The `Editor` component represents an individual code editor.
+   - It includes a code editor powered by `react-codemirror2`, with syntax highlighting.
+   - Users can expand or collapse the editor by clicking the close button in the header.
+   - It provides a way to edit HTML, CSS, or JavaScript code.
+
+**5. Result.js:**
+   - The `Result` component displays the live output of the code.
+   - It uses `useState` to store the combined HTML, CSS, and JavaScript code.
+   - The code is combined and rendered inside an iframe, which displays the live result.
+   - The `useEffect` hook updates the iframe's content when the code in the editors changes.
+
+**6. Home.js:**
+   - The `Home` component combines the `Header`, `Code`, and `Result` components to create the complete application layout.
+
+**7. App.js (not shown):**
+   - Presumably, in your application, `App.js` would be the entry point that renders the `Home` component or sets up routing.
+
+**8. Index.js (not shown):**
+   - `Index.js` is where your React app is typically initialized and where you render the `App` component.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
